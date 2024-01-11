@@ -42,7 +42,7 @@ include config/koneksi.php
                                     <div class="text-center">
                                         <h1 class="h4 text-gray-900 mb-4">Expeditor Report</h1>
                                     </div>
-                                    <form class="user" method="post" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]); ?>">
+                                    <form class="user" method="post" action= "<?php echo htmlspecialchars($_SERVER["PHP_SELF"]); ?>">
                                         <div class="form-group">
                                             <input type="text" class="form-control form-control-user"
                                                 id="username" name="username" aria-describedby="emailHelp"
