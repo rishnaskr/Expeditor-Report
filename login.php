@@ -45,7 +45,6 @@
                                         <h1 class="h4 text-gray-900 mb-4">Expeditor Report</h1>
                                     </div>
                                     <form class="user" action="login_action.php" method="POST">
-                                    
                                         <div class="form-group">
                                             <input type="text" class="form-control form-control-user"
                                                 id="username" name="username" aria-describedby="emailHelp"
