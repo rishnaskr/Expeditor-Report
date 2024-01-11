@@ -6,7 +6,7 @@ include "koneksi.php";
 $username = $_POST["username"];
 $p = md5($_POST["password"]);
 
-$sql = "select * from user where username='".$username."' and password='".$p;
+$sql = "select * from users where username='".$username."' and password='".$p;
 $hasil = mysqli_query ($kon,$sql);
 $jumlah = mysqli_num_rows($hasil);
 
