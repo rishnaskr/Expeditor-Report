@@ -1,17 +1,11 @@
 <?php
+//inisialisasi session
 session_start();
-
-if (!isset($_SESSION["username"])) {
-	echo "Anda harus login dulu <br><a href='login.php'>Klik disini</a>";
-	exit;
+//mengecek username pada session
+if( !isset($_SESSION['username']) ){
+  $_SESSION['msg'] = 'anda harus login untuk mengakses halaman ini';
+  header('Location: login.php');
 }
-
-$id=$_SESSION["id"];
-$username=$_SESSION["username"];
-$nama=$_SESSION["nama"];
-
-
-
 ?>
 <!DOCTYPE html>
 <html lang="en">
