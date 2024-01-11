@@ -15,7 +15,7 @@ $jumlah = mysqli_num_rows($hasil);
 		$row = mysqli_fetch_assoc($hasil);
 		$_SESSION["id"]=$row["id"];
 		$_SESSION["username"]=$row["username"];
-		$_SESSION["nama"]=$row["nama"];
+		$_SESSION["name"]=$row["name"];
 		
 	
 
