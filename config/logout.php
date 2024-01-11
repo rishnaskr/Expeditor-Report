@@ -6,7 +6,7 @@ $_SESSION['username']='';
 $_SESSION['name']='';
 
 
-unset($_SESSION['id_user']);
+unset($_SESSION['id']);
 unset($_SESSION['username']);
 unset($_SESSION['name']);
 
