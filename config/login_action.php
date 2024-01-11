@@ -25,4 +25,7 @@ $jumlah = mysqli_num_rows($hasil);
 		alert("Email atau password yang Anda masukkan salah!");
       return false;
 	}
+error_reporting(E_ALL);
+ini_set('display_errors', 1);
+
 ?>
