@@ -1,10 +1,17 @@
 <?php
 session_start();
- 
-if (!isset($_SESSION['username'])) {
-    header("Location: index.php");
-    exit(); // Terminate script execution after the redirect
+
+if (!isset($_SESSION["username"])) {
+	echo "Anda harus login dulu <br><a href='login.php'>Klik disini</a>";
+	exit;
 }
+
+$id=$_SESSION["id"];
+$username=$_SESSION["username"];
+$nama=$_SESSION["nama"];
+
+
+
 ?>
 <!DOCTYPE html>
 <html lang="en">
