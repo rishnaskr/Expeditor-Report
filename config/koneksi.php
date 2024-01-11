@@ -1,16 +1,10 @@
 <?php
-// Konfigurasi database
-$host = "151.106.97.20";
-$username = "u349600776_reeshdev";
-$password = "Hostinger123!";
+$server = "151.106.97.20";
+$user = "u349600776_reeshdev";
+$pass = "Hostinger123!";
 $database = "u349600776_reeshdev";
-
-// Membuat koneksi ke database
-$koneksi = new mysqli($host, $username, $password, $database);
-
-// Memeriksa koneksi
-if ($koneksi->connect_error) {
-    die("Koneksi gagal: " . $koneksi->connect_error);
+$conn = mysqli_connect($server, $user, $pass, $database);
+if (!$conn) {
+    die("Koneksi ke database gagal: " . mysqli_connect_error());
 }
 ?>
-

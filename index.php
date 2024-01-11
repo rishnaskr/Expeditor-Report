@@ -1,3 +1,11 @@
+<?php
+session_start();
+ 
+if (!isset($_SESSION['username'])) {
+    header("Location: index.php");
+    exit(); // Terminate script execution after the redirect
+}
+?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -23,12 +31,7 @@
 </head>
 
 <body id="page-top">
-<?php 
-	session_start();
-	if($_SESSION['status']!="login"){
-		header("location:index.php?pesan=belum_login");
-	}
-	?>
+<h1>Selamat Datang, <?php echo $_SESSION['username']; ?>!</h1>
     <!-- Page Wrapper -->
     <div id="wrapper">
 

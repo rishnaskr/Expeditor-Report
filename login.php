@@ -1,29 +1,31 @@
 
 <?php
 include 'config/koneksi.php';
-include 'config/functions.php';
-
-if ($_SERVER["REQUEST_METHOD"] == "POST") {
-    $username = bersihkanInput($_POST["username"]);
-    $password = bersihkanInput($_POST["password"]);
-
-    $query = "SELECT * FROM tabel_pengguna WHERE username = '$username'";
-    $result = $koneksi->query($query);
-
+session_start();
+ 
+if (isset($_SESSION['username'])) {
+    header("Location: index.php");
+    exit();
+}
+ 
+if (isset($_POST['submit'])) {
+    $username = mysqli_real_escape_string($conn, $_POST['username']);
+    $password = hash('sha256', $_POST['password']); // Hash the input password using SHA-256
+ 
+    $sql = "SELECT * FROM users WHERE username='$username' AND password='$password'";
+    $result = mysqli_query($conn, $sql);
+ 
     if ($result->num_rows > 0) {
-        $row = $result->fetch_assoc();
-        if (password_verify($password, $row["password"])) {
-            echo "Login berhasil!";
-        } else {
-            echo "Password salah!";
-        }
+        $row = mysqli_fetch_assoc($result);
+        $_SESSION['username'] = $row['username'];
+        header("Location: index.php");
+        exit();
     } else {
-        echo "Username tidak ditemukan!";
+        echo "<script>alert('Username atau password Anda salah. Silakan coba lagi!')</script>";
     }
 }
-
-$koneksi->close();
 ?>
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -68,7 +70,7 @@ $koneksi->close();
                                     <div class="text-center">
                                         <h1 class="h4 text-gray-900 mb-4">Expeditor Report</h1>
                                     </div>
-                                    <form class="user" method="post" action= "<?php echo htmlspecialchars($_SERVER["PHP_SELF"]); ?>">
+                                    <form class="user" action="" method="POST">
                                         <div class="form-group">
                                             <input type="text" class="form-control form-control-user"
                                                 id="username" name="username" aria-describedby="emailHelp"
