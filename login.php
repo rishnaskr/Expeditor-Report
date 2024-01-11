@@ -56,7 +56,7 @@ include('login_action.php');
                                     <div class="text-center">
                                         <h1 class="h4 text-gray-900 mb-4">Expeditor Report</h1>
                                     </div>
-                                    <form class="user" action="config/login.php" method="POST">
+                                    <form class="user" action="" method="POST">
                                     <?php if($error != ''){ ?>
                                         <div class="alert alert-danger" role="alert"><?= $error; ?></div>
                                     <?php } ?>
