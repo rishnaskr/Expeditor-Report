@@ -1,11 +1,9 @@
 <?php
 session_start();
 
-if (!isset($_SESSION["username"])) {
-	alert("Anda belum login!");
-    header("Location:login.php");
-      
-	exit;
+if (!isset($_SESSION['username'])) {
+    header("Location: login.php");
+    exit(); // Terminate script execution after the redirect
 }
 
 $id_user=$_SESSION["id"];
