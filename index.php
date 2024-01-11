@@ -1,11 +1,20 @@
 <?php
-//inisialisasi session
 session_start();
-//mengecek username pada session
-if( !isset($_SESSION['username']) ){
-  $_SESSION['msg'] = 'anda harus login untuk mengakses halaman ini';
-  header('Location: login.php');
+
+if (!isset($_SESSION["username"])) {
+	alert("Anda belum login!");
+    header("Location:login.php");
+      
+	exit;
 }
+
+$id_user=$_SESSION["id"];
+$username=$_SESSION["username"];
+$nama=$_SESSION["name"];
+
+
+
+
 ?>
 <!DOCTYPE html>
 <html lang="en">

@@ -1,16 +1,4 @@
-<?php
-session_start();
-if($_SESSION){
-    if($_SESSION['level']=="Administrator")
-    {
-        header("Location: index.php");
-    }
-   
-}
 
-include('config/login_action.php'); 
-
-?>
 
 <!DOCTYPE html>
 <html lang="en">
@@ -56,7 +44,7 @@ include('config/login_action.php');
                                     <div class="text-center">
                                         <h1 class="h4 text-gray-900 mb-4">Expeditor Report</h1>
                                     </div>
-                                    <form class="user" action="" method="POST">
+                                    <form class="user" action="login_action.php" method="POST">
                                     <?php if($error != ''){ ?>
                                         <div class="alert alert-danger" role="alert"><?= $error; ?></div>
                                     <?php } ?>
@@ -68,9 +56,7 @@ include('config/login_action.php');
                                         <div class="form-group">
                                             <input type="password" class="form-control form-control-user"
                                                 id="password" name="password" placeholder="Password" required>
-                                                <?php if($validate != '') {?>
-                                                <p class="text-danger"><?= $validate; ?></p>
-                                                <?php }?>
+                                                
                                         </div>
                                         <input type="submit" value="Login" class="btn btn-primary btn-user btn-block">
                                         <!-- <a href="index.php" class="btn btn-primary btn-user btn-block"> -->
