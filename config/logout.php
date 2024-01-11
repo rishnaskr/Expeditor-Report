@@ -1,17 +1,21 @@
 <?php
+// Mulai sesi (pastikan ini ditempatkan di awal file)
 session_start();
 
-$_SESSION['id']='';
-$_SESSION['username']='';
-$_SESSION['name']='';
+// Cek apakah pengguna sudah login
+if(isset($_SESSION['username'])) {
+    // Hapus semua variabel sesi
+    session_unset();
 
+    // Hancurkan sesi
+    session_destroy();
 
-unset($_SESSION['id']);
-unset($_SESSION['username']);
-unset($_SESSION['name']);
-
-session_unset();
-session_destroy();
-header('Location:../login.php');
-
+    // Redirect atau lakukan tindakan lain setelah logout
+    header("Location: ../login.php");
+    exit();
+} else {
+    // Pengguna tidak login, lakukan sesuatu (mungkin mengarahkan ke halaman login)
+    header("Location: ../login.php");
+    exit();
+}
 ?>
