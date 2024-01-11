@@ -1,31 +1,4 @@
-<?php
-include 'config/koneksi.php';
-session_start();
- 
-if (isset($_SESSION['username'])) {
-    header("Location: index.php");
-    exit();
-}
- 
-if (isset($_POST['submit'])) {
-    $username = mysqli_real_escape_string($conn, $_POST['username']);
-    $password = hash('sha256', $_POST['password']); // Hash the input password using SHA-256
- 
-    $sql = "SELECT * FROM users WHERE username='$username' AND password='$password'";
-    $result = mysqli_query($conn, $sql);
- 
-    if ($result->num_rows > 0) {
-        $row = mysqli_fetch_assoc($result);
-        $_SESSION['username'] = $row['username'];
-        header("Location: index.php");
-        exit();
-    } else {
-        echo "<script>alert('Username atau password Anda salah. Silakan coba lagi!')</script>";
-    }
-}
-error_reporting(E_ALL);
-ini_set('display_errors', 1);
-?>
+
 
 <!DOCTYPE html>
 <html lang="en">
@@ -71,7 +44,7 @@ ini_set('display_errors', 1);
                                     <div class="text-center">
                                         <h1 class="h4 text-gray-900 mb-4">Expeditor Report</h1>
                                     </div>
-                                    <form class="user" action="" method="POST">
+                                    <form class="user" action="login_action.php" method="POST">
                                         <div class="form-group">
                                             <input type="text" class="form-control form-control-user"
                                                 id="username" name="username" aria-describedby="emailHelp"
