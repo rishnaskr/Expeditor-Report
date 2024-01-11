@@ -19,7 +19,7 @@ $jumlah = mysqli_num_rows($hasil);
 		
 	
 
-		header("Location:config/user.php");
+		header("Location:../index.php");
 		
 	}else {
 		alert("Email atau password yang Anda masukkan salah!");
