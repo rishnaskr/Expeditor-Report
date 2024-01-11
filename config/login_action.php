@@ -19,7 +19,7 @@ $jumlah = mysqli_num_rows($hasil);
 		
 	
 
-		header("Location:index.php");
+		header("Location:../index.php");
 		
 	}else {
 		alert("Username atau password yang Anda masukkan salah!");
