@@ -1,4 +1,16 @@
+<?php
+session_start();
+if($_SESSION){
+    if($_SESSION['level']=="Administrator")
+    {
+        header("Location: index.php");
+    }
+   
+}
 
+include('login_action.php'); 
+
+?>
 
 <!DOCTYPE html>
 <html lang="en">

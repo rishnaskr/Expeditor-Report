@@ -1,29 +1,44 @@
 <?php
-session_start();
+
+$error=''; 
 
 include "koneksi.php";
-
-$username = $_POST["username"];
-$p = ($_POST["password"]);
-
-$sql = "select * from users where username='".$username."' and password='".$p;
-$hasil = mysqli_query ($kon,$sql);
-$jumlah = mysqli_num_rows($hasil);
-
-
-	if ($jumlah>0) {
-		$row = mysqli_fetch_assoc($hasil);
-		$_SESSION["id"]=$row["id"];
-		$_SESSION["username"]=$row["username"];
-		$_SESSION["name"]=$row["name"];
-		
-	
-
-		header("Location:../index.php");
-		
-	}else {
-		alert("Email atau password yang Anda masukkan salah!");
-      return false;
-	}
-
+if(isset($_POST['submit']))
+{               
+    $username   = $_POST['username'];
+    $password   = $_POST['password'];
+    $level      = $_POST['level'];
+                    
+    $query = mysqli_query($connection, "SELECT * FROM users WHERE username='$username' AND password='$password'");
+    if(mysqli_num_rows($query) == 0)
+    {
+        $error = "Username or Password is invalid";
+    }
+    else
+    {
+        $row = mysqli_fetch_assoc($query);
+        $_SESSION['username']=$row['username'];
+        $_SESSION['level'] = $row['level'];
+        
+        if($row['level'] == "Administrator" && $level=="1")
+        {
+            
+            header("Location: ../index.php");
+        }
+        // else if($row['level'] =="Dosen" && $level=="2")
+        // {
+        //     header("Location: hallecturer.php");
+        // }
+        // else if($row['level'] == "Mahasiswa" && $level=="3")
+        // {
+            
+        //     header("Location: halstudent.php");
+        // }
+        // else
+        // {
+        //     $error = "Failed Login";
+        // }
+    }
+}
+            
 ?>
