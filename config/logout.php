@@ -1,7 +1,18 @@
 <?php   
 session_start(); //to ensure you are using same session
+
+$_SESSION['id_user']='';
+$_SESSION['username']='';
+$_SESSION['nama']='';
+$_SESSION['email']='';
+
+unset($_SESSION['id_user']);
+unset($_SESSION['username']);
+unset($_SESSION['nama']);
+unset($_SESSION['email']);
+
 session_unset();
-session_destroy(); //destroy the session
-header("location:../login.php"); //to redirect back to "index.php" after logging out
-exit();
+session_destroy();
+header('Location:login.php');
+
 ?>
