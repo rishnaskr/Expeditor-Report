@@ -1,4 +1,3 @@
-
 <?php
 include 'config/koneksi.php';
 session_start();
@@ -24,6 +23,8 @@ if (isset($_POST['submit'])) {
         echo "<script>alert('Username atau password Anda salah. Silakan coba lagi!')</script>";
     }
 }
+error_reporting(E_ALL);
+ini_set('display_errors', 1);
 ?>
 
 <!DOCTYPE html>
