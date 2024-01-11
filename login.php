@@ -1,6 +1,32 @@
-include config/koneksi.php
+
+<?php
+include 'config/koneksi.php';
+include 'config/functions.php';
+
+if ($_SERVER["REQUEST_METHOD"] == "POST") {
+    $username = bersihkanInput($_POST["username"]);
+    $password = bersihkanInput($_POST["password"]);
+
+    $query = "SELECT * FROM tabel_pengguna WHERE username = '$username'";
+    $result = $koneksi->query($query);
+
+    if ($result->num_rows > 0) {
+        $row = $result->fetch_assoc();
+        if (password_verify($password, $row["password"])) {
+            echo "Login berhasil!";
+        } else {
+            echo "Password salah!";
+        }
+    } else {
+        echo "Username tidak ditemukan!";
+    }
+}
+
+$koneksi->close();
+?>
 <!DOCTYPE html>
 <html lang="en">
+
 
 <head>
 
