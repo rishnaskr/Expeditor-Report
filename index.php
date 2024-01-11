@@ -12,9 +12,6 @@ $id_user=$_SESSION["id"];
 $username=$_SESSION["username"];
 $nama=$_SESSION["name"];
 
-
-
-
 ?>
 <!DOCTYPE html>
 <html lang="en">

@@ -1,5 +1,5 @@
 <?php
-$server = "151.106.97.20";
+$server = "151.106.97.204";
 $user = "u349600776_reeshdev";
 $pass = "Hostinger123!";
 $database = "u349600776_reeshdev";
