@@ -6,7 +6,7 @@ include "koneksi.php";
 $username = $_POST["username"];
 $p = ($_POST["password"]);
 
-$sql = "select * from user where username='".$username."' and password='".$p;
+$sql = "select * from users where username='".$username."' and password='".$p;
 $hasil = mysqli_query ($kon,$sql);
 $jumlah = mysqli_num_rows($hasil);
 
@@ -25,7 +25,5 @@ $jumlah = mysqli_num_rows($hasil);
 		alert("Email atau password yang Anda masukkan salah!");
       return false;
 	}
-error_reporting(E_ALL);
-ini_set('display_errors', 1);
 
 ?>
