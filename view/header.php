@@ -9,7 +9,7 @@
     <meta name="description" content="">
     <meta name="author" content="">
 
-    <title>SB Admin 2 - Tables</title>
+    <title>Expeditor Report</title>
 
     <!-- Custom fonts for this template -->
     <link href="vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
@@ -22,5 +22,15 @@
 
     <!-- Custom styles for this page -->
     <link href="vendor/datatables/dataTables.bootstrap4.min.css" rel="stylesheet">
+    
+<!-- ... -->
+<script type="text/javascript" src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+ 
+ <!-- DevExtreme theme -->
+ <link rel="stylesheet" href="https://cdn3.devexpress.com/jslib/23.2.3/css/dx.light.css">
 
+ <!-- DevExtreme libraries (reference only one of them) -->
+ <script type="text/javascript" src="https://cdn3.devexpress.com/jslib/23.2.3/js/dx.all.js"></script>
+ <!-- <script type="text/javascript" src="https://cdn3.devexpress.com/jslib/23.2.3/js/dx.web.js"></script> -->
+ <!-- <script type="text/javascript" src="https://cdn3.devexpress.com/jslib/23.2.3/js/dx.viz.js"></script> -->
 </head>
