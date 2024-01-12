@@ -1,5 +1,5 @@
 <?php
-include view/header.php
+include "view/header.php";
 ?>
 <body id="page-top">
 
