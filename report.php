@@ -230,7 +230,7 @@ include "view/header.php";
                         For more information about DataTables, please visit the <a target="_blank"
                             href="https://datatables.net">official DataTables documentation</a>.</p>
                      
-                    <form method="post" enctype="multipart/form-data" action="upload_aksi.php">
+                    
                     <div class="input-group mb-3">
                         <div class="input-group-prepend">
                             <button class="btn btn-outline-secondary" type="file" id="button-addon1">Cari Data</button>
@@ -238,7 +238,7 @@ include "view/header.php";
                             <input name="masterpo" type="text" class="form-control" placeholder="" aria-label="Example text with button addon" aria-describedby="button-addon1" >
                             <button type="upload" class="btn btn-primary">Import</button>
                     </div>
-                    </form>
+                   
 
                     <div class="pull-right">
                         <a href="import.php" class="btn btn-success btn-xs"><i class="glyphicon glyphicon-import"></i> Import Master PO</a>
