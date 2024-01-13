@@ -3,16 +3,9 @@
 
 <head>
 <!-- ... -->
-<script type="text/javascript" src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
- 
+
  <!-- DevExtreme theme -->
- <link rel="stylesheet" href="https://cdn3.devexpress.com/jslib/23.2.3/css/dx.light.css">
-
- <!-- DevExtreme libraries (reference only one of them) -->
- <script type="text/javascript" src="https://cdn3.devexpress.com/jslib/23.2.3/js/dx.all.js"></script>
- <!-- <script type="text/javascript" src="https://cdn3.devexpress.com/jslib/23.2.3/js/dx.web.js"></script> -->
- <!-- <script type="text/javascript" src="https://cdn3.devexpress.com/jslib/23.2.3/js/dx.viz.js"></script> -->
-
+ 
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
@@ -22,6 +15,8 @@
     <title>Expeditor Report</title>
 
     <!-- Custom fonts for this template -->
+    <link rel="stylesheet" href="https://cdn3.devexpress.com/jslib/23.2.3/css/dx.light.css">
+
     <link href="vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
     <link
         href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i"

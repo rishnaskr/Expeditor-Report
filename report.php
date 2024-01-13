@@ -336,6 +336,12 @@ include "view/header.php";
     <!-- Page level plugins -->
     <script src="vendor/datatables/jquery.dataTables.min.js"></script>
     <script src="vendor/datatables/dataTables.bootstrap4.min.js"></script>
+    <script type="text/javascript" src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+ 
+ <!-- DevExtreme libraries (reference only one of them) -->
+ <script type="text/javascript" src="https://cdn3.devexpress.com/jslib/23.2.3/js/dx.all.js"></script>
+ <!-- <script type="text/javascript" src="https://cdn3.devexpress.com/jslib/23.2.3/js/dx.web.js"></script> -->
+ <!-- <script type="text/javascript" src="https://cdn3.devexpress.com/jslib/23.2.3/js/dx.viz.js"></script> -->
 
     <!-- Page level custom scripts -->
     <script src="js/demo/datatables-demo.js"></script>
