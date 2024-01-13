@@ -176,7 +176,7 @@ for ($i=2; $i<=$jumlah_baris; $i++){
      order_date,
      part_no,
      manufacturer,
-     description,
+     description_po,
      ir_pr_priority,
      po_expedite_code,
      qty_order,
