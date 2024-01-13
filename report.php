@@ -363,9 +363,10 @@ const tasks = [{
   Status: 'Completed',
   Priority: 'High',
   Completion: 100,
-  EmployeeID: 8,
+  EmployeeID: 1,
 }];
     </script>
+
     <script>    
   $('#gridContainer').dxDataGrid({
     dataSource: master_po,
@@ -373,7 +374,7 @@ const tasks = [{
     showBorders: true,
     columns: [{
       dataField: 'Prefix',
-      caption: 'Title',
+      caption: 'District',
       width: 70,
     },
     'FirstName',
