@@ -292,7 +292,7 @@ include "view/header.php";
       },
     },
   });
-});
+
 ?>
       </div>
     </div>
