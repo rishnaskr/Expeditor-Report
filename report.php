@@ -349,9 +349,18 @@ include "view/header.php";
   State: 'California',
   BirthDate: '1964/03/16',
 }]; 
+const tasks = [{
+  ID: 1,
+  Subject: 'Prepare 2013 Financial',
+  StartDate: '2013/01/15',
+  DueDate: '2013/01/31',
+  Status: 'Completed',
+  Priority: 'High',
+  Completion: 100,
+  EmployeeID: 8,
+}];
     </script>
     <script>    
-       
   $('#gridContainer').dxDataGrid({
     dataSource: master_po,
     keyExpr: 'ID',
