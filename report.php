@@ -233,7 +233,7 @@ include "view/header.php";
 <form method="post" enctype="multipart/form-data" action="import.php">
                     <div class="input-group mb-3">
                             <input name="masterpo" type="file" class="form-control" placeholder="" aria-label="Example text with button addon" aria-describedby="button-addon1" >
-                            <input type="submit" value="Import" class="btn btn-primary btn-user btn-block">
+                            <input type="submit" value="Import" class="btn btn-primary">
                     </div>
 </form>
                    
