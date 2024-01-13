@@ -235,7 +235,7 @@ include "view/header.php";
                         <div class="input-group-prepend">
                             <button class="btn btn-outline-secondary" type="file" id="button-addon1">Cari Data</button>
                         </div>
-                            <input name="masterpo" type="text" class="form-control" placeholder="" aria-label="Example text with button addon" aria-describedby="button-addon1" required>
+                            <input name="masterpo" type="text" class="form-control" placeholder="" aria-label="Example text with button addon" aria-describedby="button-addon1" >
                             <button type="upload" class="btn btn-primary">Import</button>
                     </div>
                     </form>
