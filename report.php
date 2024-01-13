@@ -229,13 +229,14 @@ include "view/header.php";
                     <p class="mb-4">DataTables is a third party plugin that is used to generate the demo table below.
                         For more information about DataTables, please visit the <a target="_blank"
                             href="https://datatables.net">official DataTables documentation</a>.</p>
+                          
                             <!-- table devexpand -->
                             <div class="demo-container">
                                 <div id="gridContainer">
-     
                                 </div>
                             </div>
                             <!-- end table devexpand -->
+
                     <!-- DataTales Example -->
                     <div class="card shadow mb-4">
                         <div class="card-header py-3">
