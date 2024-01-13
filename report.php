@@ -340,7 +340,7 @@ include "view/header.php";
     <!-- Page level custom scripts -->
     <script src="js/demo/datatables-demo.js"></script>
     <script>    
-$(() => {
+
   $('#gridContainer').dxDataGrid({
     dataSource: employees,
     keyExpr: 'ID',
@@ -400,7 +400,6 @@ $(() => {
       },
     },
   });
-});
     </script>
 
 </body>
