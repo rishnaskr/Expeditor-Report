@@ -402,7 +402,7 @@ include "view/header.php";
   });
     </script>
     <script>
-        const employees = [{
+        const master_po = [{
   ID: 1,
   Prefix: 'Mr.',
   FirstName: 'John',
