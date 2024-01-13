@@ -237,9 +237,7 @@ include "view/header.php";
                     </div>
                    
 
-                    <div class="pull-right">
-                        <a href="import.php" class="btn btn-success btn-xs"><i class="glyphicon glyphicon-import"></i> Import Master PO</a>
-                    </div>
+                    
 
                             <!-- table devexpand -->
                             <div class="demo-container">
