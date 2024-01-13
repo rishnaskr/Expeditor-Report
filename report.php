@@ -229,7 +229,73 @@ include "view/header.php";
                     <p class="mb-4">DataTables is a third party plugin that is used to generate the demo table below.
                         For more information about DataTables, please visit the <a target="_blank"
                             href="https://datatables.net">official DataTables documentation</a>.</p>
+                            <div class="demo-container">
+      <div id="gridContainer">
+      <?php 
 
+  $('#gridContainer').dxDataGrid({
+    dataSource: employees,
+    keyExpr: 'ID',
+    showBorders: true,
+    columns: [{
+      dataField: 'Prefix',
+      caption: 'Title',
+      width: 70,
+    },
+    'FirstName',
+    'LastName', {
+      dataField: 'Position',
+      width: 170,
+    }, {
+      dataField: 'State',
+      width: 125,
+    }, {
+      dataField: 'BirthDate',
+      dataType: 'date',
+    },
+    ],
+    masterDetail: {
+      enabled: true,
+      template(container, options) {
+        const currentEmployeeData = options.data;
+
+        $('<div>')
+          .addClass('master-detail-caption')
+          .text(`${currentEmployeeData.FirstName} ${currentEmployeeData.LastName}'s Tasks:`)
+          .appendTo(container);
+
+        $('<div>')
+          .dxDataGrid({
+            columnAutoWidth: true,
+            showBorders: true,
+            columns: ['Subject', {
+              dataField: 'StartDate',
+              dataType: 'date',
+            }, {
+              dataField: 'DueDate',
+              dataType: 'date',
+            }, 'Priority', {
+              caption: 'Completed',
+              dataType: 'boolean',
+              calculateCellValue(rowData) {
+                return rowData.Status === 'Completed';
+              },
+            }],
+            dataSource: new DevExpress.data.DataSource({
+              store: new DevExpress.data.ArrayStore({
+                key: 'ID',
+                data: tasks,
+              }),
+              filter: ['EmployeeID', '=', options.key],
+            }),
+          }).appendTo(container);
+      },
+    },
+  });
+});
+?>
+      </div>
+    </div>
                     <!-- DataTales Example -->
                     <div class="card shadow mb-4">
                         <div class="card-header py-3">
