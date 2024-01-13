@@ -339,8 +339,8 @@ include "view/header.php";
 
     <!-- Page level custom scripts -->
     <script src="js/demo/datatables-demo.js"></script>
-    <script>    
-        const master_po = [{
+    <script>
+     const master_po = [{
   ID: 1,
   Prefix: 'Mr.',
   FirstName: 'John',
@@ -348,7 +348,10 @@ include "view/header.php";
   Position: 'CEO',
   State: 'California',
   BirthDate: '1964/03/16',
-}];
+}]; 
+    </script>
+    <script>    
+       
   $('#gridContainer').dxDataGrid({
     dataSource: master_po,
     keyExpr: 'ID',
