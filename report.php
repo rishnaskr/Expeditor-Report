@@ -230,12 +230,12 @@ include "view/header.php";
                         For more information about DataTables, please visit the <a target="_blank"
                             href="https://datatables.net">official DataTables documentation</a>.</p>
                      
-                    <form method="post" enctype="multipart/form-data" action="import.php">
+                    
                     <div class="input-group mb-3">
                             <input name="masterpo" type="file" class="form-control" placeholder="" aria-label="Example text with button addon" aria-describedby="button-addon1" >
-                            <button name="upload" type="submit" class="btn btn-primary">Import</button>
+                            <button name="upload" href="import.php" type="submit" class="btn btn-primary">Import</button>
                     </div>
-                    </form>
+                   
 
                     <div class="pull-right">
                         <a href="import.php" class="btn btn-success btn-xs"><i class="glyphicon glyphicon-import"></i> Import Master PO</a>
