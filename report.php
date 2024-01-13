@@ -340,7 +340,15 @@ include "view/header.php";
     <!-- Page level custom scripts -->
     <script src="js/demo/datatables-demo.js"></script>
     <script>    
-
+        const master_po = [{
+  ID: 1,
+  Prefix: 'Mr.',
+  FirstName: 'John',
+  LastName: 'Heart',
+  Position: 'CEO',
+  State: 'California',
+  BirthDate: '1964/03/16',
+}];
   $('#gridContainer').dxDataGrid({
     dataSource: master_po,
     keyExpr: 'ID',
@@ -401,17 +409,9 @@ include "view/header.php";
     },
   });
     </script>
-    <script>
-        const master_po = [{
-  ID: 1,
-  Prefix: 'Mr.',
-  FirstName: 'John',
-  LastName: 'Heart',
-  Position: 'CEO',
-  State: 'California',
-  BirthDate: '1964/03/16',
-}];
-    </script>
+    
+
+   
 
 </body>
 
