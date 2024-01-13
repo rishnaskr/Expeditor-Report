@@ -236,5 +236,5 @@ for ($i=2; $i<=$jumlah_baris; $i++){
 unlink($_FILES['masterpo']['name']);
  
 // alihkan halaman ke index.php
-header("location:index.php?berhasil=$berhasil");
+header("location:report.php?berhasil=$berhasil");
 ?>
