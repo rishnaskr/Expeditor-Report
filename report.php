@@ -342,7 +342,7 @@ include "view/header.php";
     <script>    
 
   $('#gridContainer').dxDataGrid({
-    dataSource: employees,
+    dataSource: master_po,
     keyExpr: 'ID',
     showBorders: true,
     columns: [{
