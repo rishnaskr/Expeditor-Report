@@ -1,7 +1,7 @@
 <?php
 include "view/header.php";
 ?>
-<body id="page-top">
+<body id="page-top" class="dx-viewport">
 
     <!-- Page Wrapper -->
     <div id="wrapper">
