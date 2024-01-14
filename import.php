@@ -1,6 +1,6 @@
 <?php 
 // menghubungkan dengan koneksi
-include 'koneksi.php';
+include 'config/koneksi.php';
 // menghubungkan dengan library excel reader
 include "excel_reader2.php";
 ?>
@@ -38,7 +38,7 @@ for ($i=2; $i<=$jumlah_baris; $i++){
     $order_date = $data->val($i, 13);
     $part_no = $data->val($i, 14);
     $manufacturer = $data->val($i, 15);
-    $description = $data->val($i, 16);
+    $description_po = $data->val($i, 16);
     $ir_pr_priority = $data->val($i, 17);
     $po_expedite_code = $data->val($i, 18);
     $qty_order = $data->val($i, 19);
@@ -108,7 +108,7 @@ for ($i=2; $i<=$jumlah_baris; $i++){
     && $order_date != ""
     && $part_no != ""
     && $manufacturer != ""
-    && $description != ""
+    && $description_po != ""
     && $ir_pr_priority != ""
     && $po_expedite_code != ""
     && $qty_order != ""
@@ -243,7 +243,7 @@ for ($i=2; $i<=$jumlah_baris; $i++){
      '$order_date',
      '$part_no',
      '$manufacturer',
-     '$description',
+     '$description_po',
      '$ir_pr_priority',
      '$po_expedite_code',
      '$qty_order',
