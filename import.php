@@ -1,6 +1,6 @@
 <?php 
 // menghubungkan dengan koneksi
-include 'config/koneksi.php';
+include "config/koneksi.php";
 // menghubungkan dengan library excel reader
 include "excel_reader2.php";
 ?>
