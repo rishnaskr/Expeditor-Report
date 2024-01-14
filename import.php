@@ -303,5 +303,6 @@ for ($i=2; $i<=$jumlah_baris; $i++){
 unlink($_FILES['masterpo']['name']);
  
 // alihkan halaman ke index.php
-header("location:report.php?berhasil=$berhasil");
+echo "<script>window.alert('sukses import $berhasil data!')</script>";
+echo "<script>window.location='report.php'</script>";
 ?>
